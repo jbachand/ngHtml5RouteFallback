@@ -1,0 +1,26 @@
+{
+  "name": "ngHtml5RouteFallback",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jbachand/ngHtml5RouteFallback",
+  "authors": [
+    "jbachand <jeff@n2op.com>"
+  ],
+  "description": "Angular HTML5 Route Fallback for browsers without pushstate",
+  "main": "ngHtml5RouteFallback.js",
+  "keywords": [
+    "Angular",
+    "HTML5",
+    "pushstate",
+    "IE",
+    "Routing",
+    "Routes"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
