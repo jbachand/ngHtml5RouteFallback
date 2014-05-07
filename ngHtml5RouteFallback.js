@@ -24,7 +24,7 @@ angular.module('ngHtml5RouteFallback', [])
        }
       } else {
 
-        $window.location.replace($window.location.pathname+'/#!' + $window.location.pathname); //No hash, take path
+        $window.location.replace('/#!' + $window.location.pathname); //No hash, take path
       }
     }
 
