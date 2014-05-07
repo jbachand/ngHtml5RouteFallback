@@ -13,22 +13,13 @@ angular.module('ngHtml5RouteFallback', [])
   .run([ '$window', function($window) {
     var buggyAndroid = parseInt((/android (\d+)/.exec($window.navigator.userAgent.toLowerCase()) || [])[1], 10) < 4;
     if (!history.pushState || buggyAndroid) {
-      console.log($window.location.hash);
-      console.log($window.location.pathname.substr($window.location.pathname.length - 1));
-      console.log($window.location.hash.substr(2));
-      console.log($window.location.pathname);
       if ($window.location.hash) {
-        console.log("has hash");
         var trailingSlash = $window.location.pathname.substr($window.location.pathname.length - 1);
         if(trailingSlash !== '/'){
-          console.log("trailing slash");
            $window.location.replace($window.location.pathname+'/#!' + $window.location.hash.substr(2)); //Hash and a path, just keep the hash (redirect)
-         }else{
-           console.log("not trailing slash");
-           $window.location.replace('/#!' + $window.location.hash.substr(2));
          }
       } else {
-        console.log("no hash");
+
         $window.location.replace($window.location.pathname+'/#!' + $window.location.pathname); //No hash, take path
       }
     }
