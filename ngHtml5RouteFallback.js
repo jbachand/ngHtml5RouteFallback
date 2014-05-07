@@ -15,6 +15,7 @@ angular.module('ngHtml5RouteFallback', [])
     if (!history.pushState || buggyAndroid) {
       if ($window.location.hash) {
         if($window.location.pathname !== '/'){
+          alert($window.location.pathname);
            $window.location.replace($window.location.pathname+'/#!' + $window.location.hash.substr(2)); //Hash and a path, just keep the hash (redirect)
          }
       } else {
