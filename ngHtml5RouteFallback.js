@@ -17,10 +17,7 @@ angular.module('ngHtml5RouteFallback', [])
         var trailingSlash = $window.location.pathname.substr($window.location.pathname.length - 1);
         if(trailingSlash !== '/'){
            $window.location.replace($window.location.pathname+'/#!' + $window.location.hash.substr(2)); //Hash and a path, just keep the hash (redirect)
-         } else
-         if($window.location.pathname !== '/'){
-           $window.location.replace('/#!' + $window.location.hash.substr(2)); //Hash and a path, just keep the hash (redirect)
-         }
+         } 
       } else {
 
         $window.location.replace($window.location.pathname+'/#!' + $window.location.pathname); //No hash, take path
